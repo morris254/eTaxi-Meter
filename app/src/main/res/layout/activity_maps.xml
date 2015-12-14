@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="55dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="eTaxi Meter"
+        android:textColor="@color/floroGreen"
+        android:textSize="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="START JOURNEY"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/map"
+        android:id="@+id/bt_startWalking"
+        android:background="#000000"
+        android:textColor="@color/floroGreen"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Distance travelled: 0.0 km"
+        android:textColor="#000000"
+        android:layout_below="@id/bt_startWalking"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:id="@+id/tv_distance"
+        android:visibility="invisible"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_distance"
+        android:id="@+id/my_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate fare "
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            android:id="@+id/cb_fare_checkbox"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fare rate (per km)"
+            android:inputType="number"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/et_fare_rate"
+            android:textColor="#000000"
+            android:visibility="invisible"
+            />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Fare"
+        android:background="#000000"
+        android:textColor="@color/floroGreen"
+        android:layout_below="@+id/my_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"
+        android:id="@+id/bt_save_fare"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Fare: "
+        android:textColor="#000000"
+        android:layout_below="@id/my_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:id="@+id/tv_fare"
+        android:visibility="invisible"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@android:drawable/ic_input_add"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>
